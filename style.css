@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(back.jpg);
+    background-size: cover;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+.container .card{
+    position: relative;
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+}
+.container .card .card-item{
+    position: absolute;
+    transform: translateY(150px);
+    opacity: 0;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.5s ease;
+}
+.container .card:hover .card-item{
+    transform: translateY(0);
+    opacity: 1;
+}
+.container .card .card-item h2{
+    position: absolute;
+    font-size: 9rem;
+    top: -60px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+.container .card .card-item h3{
+    position: relative;
+    font-size: 2.2rem;
+    color: white;
+}
+.container .card .card-item p{
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+.container .card .card-item a{
+    display: inline-block;
+    background: #fff;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 20px;
+    margin-top: 15px;
+}
+.container .card:hover{
+    background: url(back2.jpeg);
+    background-position: center;
+    animation: rotate 1.4s linear infinite;
+}
+@keyframes rotate{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
